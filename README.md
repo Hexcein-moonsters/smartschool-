@@ -1,1 +1,1 @@
-# Smartschool-
+# Smartschool+
