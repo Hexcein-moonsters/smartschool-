@@ -73,9 +73,31 @@
       <div class="language-js highlighter-rouge">
         <div class="highlight">
           <pre class="highlight">
-  <code>// Javascript code with syntax highlighting. var fun = function lang (l) { dateformat.i18n = require('./lang/' + l) return true; };</code>
-<code># Ruby code with syntax highlighting GitHubPages::Dependencies.gems.each do |gem, version| s.add_dependency(gem, "= #{version}") end</code>
-</pre>
+ 
+            
+
+            <pre class="language-javascript">
+                <code>
+                // Javascript code with syntax highlighting.
+                var fun = function lang(l) {
+                  dateformat.i18n = require('./lang/' + l);
+                  return true;
+                };
+                </code>
+            </pre>
+                <pre class="language-ruby">
+                    <code>
+                # Ruby code with syntax highlighting
+                GitHubPages::Dependencies.gems.each do |gem, version|
+                  s.add_dependency(gem, "= #{version}")
+                end
+                </code>
+            </pre>
+
+
+
+
+  </pre>
         </div>
       </div>
       <h4 id="header-4">
@@ -329,4 +351,10 @@
     </section>
     
   </div>
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+<script>hljs.highlightAll();</script>
