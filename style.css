@@ -697,3 +697,22 @@ td {
     text-align: center; 
     border: 1px solid #ebebeb;
 } 
+
+pre code {
+    padding: 0;
+    color: #f2f2f2;
+    background-color: #303030;
+    border: none;
+}
+
+code {
+    padding: 0 3px;
+    background-color: #f2f2f2;
+    border: solid 1px #ddd;
+}
+code, pre {
+    margin-bottom: 30px;
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+    font-size: 14px;
+    color: #222;
+}
