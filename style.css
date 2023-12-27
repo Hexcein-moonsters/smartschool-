@@ -824,6 +824,7 @@ body {
 
 code {
     display: block;
+    width: 100%;
   }
 
   pre code {
