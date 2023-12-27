@@ -704,6 +704,7 @@ pre {
 }
 pre code {
     padding: 0;
+    padding-left: 13px;
     color: #f2f2f2;
     background-color: #303030;
     border: none;
@@ -715,119 +716,9 @@ code {
     border: solid 1px #ddd;
 }
 code, pre {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
     font-size: 14px;
     color: #222;
 }
 
-
-body { 
-    padding: 0; 
-    margin: 0; 
-    font: inherit; 
-    font-size: 100%; 
-    vertical-align: baseline; 
-    border: 0;
-} 
-
-body { 
-    line-height: 1;
-} 
-
-body { 
-    font-family: 'Helvetica Neue', Helvetica, Arial, serif; 
-    font-size: 1em; 
-    line-height: 1.6; 
-    color: #6d6d6d; 
-    text-shadow: 0 1px 0 rgba(255,255,255,0.8); 
-    background: #e7e7e7 url(https://hexcein-moonsters.github.io/tactile_demo/assets/images/body-bg.png) 0 0 repeat; 
-    background-image: url("https://hexcein-moonsters.github.io/tactile_demo/assets/images/body-bg.png"); 
-    background-position-x: 0px; 
-    background-position-y: 0px; 
-    background-size: initial; 
-    background-repeat-x: repeat; 
-    background-repeat-y: repeat; 
-    background-attachment: initial; 
-    background-origin: initial; 
-    background-clip: initial; 
-    background-color: rgb(231, 231, 231);
-} 
-
-html { 
-    padding: 0; 
-    margin: 0; 
-    font: inherit; 
-    font-size: 100%; 
-    vertical-align: baseline; 
-    border: 0;
-} 
-
-pre { 
-    padding: 0; 
-    margin: 0; 
-    font: inherit; 
-    font-size: 100%; 
-    vertical-align: baseline; 
-    border: 0;
-} 
-
-pre { 
-    margin-bottom: 0px; 
-    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; 
-    font-size: 0px; 
-    color: #222;
-} 
-
-pre { 
-    padding: 0px; 
-     padding-left: 0px;
-      padding-right: 0px;
-    overflow: auto; 
-    color: #f2f2f2; 
-    text-shadow: none; 
-    background: #303030;
-} 
-
-code { 
-    padding: 0; 
-    margin: 0; 
-    font: inherit; 
-    font-size: 100%; 
-    vertical-align: baseline; 
-    border: 0;
-} 
-
-code { 
-    margin-bottom: 30px; 
-    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; 
-    font-size: 14px; 
-    color: #222;
-} 
-
-code { 
-    padding: 0 3px; 
-    background-color: #f2f2f2; 
-    border: solid 1px #ddd;
-} 
-
-code  { 
-    padding: 0; 
-    color: #f2f2f2; 
-    background-color: #303030; 
-    border: none;
-} 
-
-body {
-    background-position-x: 0%;
-}
-
-code {
-    display: block;
-    width: 100% !important;
-    padding: 0 !important;
-  }
-
-  pre code {
-    padding-left: 13px !important;
-}
