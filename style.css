@@ -818,3 +818,6 @@ code  {
     border: none;
 } 
 
+body {
+    background-position-x: 0%;
+}
