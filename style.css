@@ -122,7 +122,7 @@ hr {
     background: transparent url("hr.png") 50% 0 no-repeat; 
     border: none; 
     background-image: url("hr.png"); 
-    background-position-x: 50%; 
+    background-position-x: 0%; 
     background-position-y: 0px; 
     background-size: initial; 
     background-repeat-x: no-repeat; 
@@ -821,3 +821,7 @@ code  {
 body {
     background-position-x: 0%;
 }
+
+code {
+    display: block;
+  }
