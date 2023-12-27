@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Smartschool+</title> 
 </head>
 <body>
@@ -85,9 +86,6 @@
                 var fun = function lang(l) {
                     dateformat.i18n = require('./lang/' + l);
                     return true;
-                };
-                help {
-                    color: #ffffff
                 }
             </code>
         </pre>
@@ -352,5 +350,9 @@
 
   <link href="prism.css" rel="stylesheet" />
   <script defer src="prism.js"></script>
+  <style>pre[class*=language-] code {
+    padding-left: 5px; /* Adjust the value as needed */
+}
+</style>
 </body>
 </html>
