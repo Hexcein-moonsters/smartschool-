@@ -722,19 +722,6 @@ code, pre {
 }
 
 
-body {  
-    font:inherit;
-    font-size:100%;
-    color:#d0d0d0;
-    background:transparent url(https://hexcein-moonsters.github.io/tactile_demo/assets/images/highlight-bg.jpg) 50% 0 no-repeat;
-    background-image:url("https://hexcein-moonsters.github.io/tactile_demo/assets/images/highlight-bg.jpg");
-    line-height:1.5;
-    font-family:'Helvetica Neue', Helvetica, Arial, serif;
-  }  
-.highlight { 
-    color: #d0d0d0;
-} 
-
 body { 
     padding: 0; 
     margin: 0; 
