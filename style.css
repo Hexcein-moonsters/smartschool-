@@ -698,6 +698,10 @@ td {
     border: 1px solid #ebebeb;
 } 
 
+pre { 
+    padding: 0px; 
+    background: #303030;
+}
 pre code {
     padding: 0;
     color: #f2f2f2;
