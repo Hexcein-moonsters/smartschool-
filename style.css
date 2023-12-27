@@ -773,7 +773,7 @@ pre {
 } 
 
 pre { 
-    margin-bottom: 30px; 
+    margin-bottom: 0px; 
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; 
     font-size: 0px; 
     color: #222;
