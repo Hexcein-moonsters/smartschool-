@@ -825,3 +825,7 @@ body {
 code {
     display: block;
   }
+
+  pre code {
+    padding-left: 13px !important;
+}
