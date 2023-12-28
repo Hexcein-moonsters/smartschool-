@@ -494,6 +494,7 @@ span {
     background-origin: initial; 
     background-clip: initial; 
     background-color: transparent;
+    background-color: #fff;
 } 
 
 strong { 
