@@ -483,7 +483,7 @@ span {
 } 
 
 #download-tar-gz span  { 
-    background-image: url("images/tar-gz-iconr.png"); 
+    background-image: url("images/tar-gz-icon.png"); 
     background-position-x: 12px; 
     background-position-y: 50%; 
     background-size: initial; 
