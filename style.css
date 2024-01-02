@@ -469,7 +469,7 @@ span {
 
 
 #download-zip span  { 
-    background-image: url("images/zip.svg"); 
+    background-image: url("images/ext.png"); 
     background-position-x: 12px; 
     background-position-y: 50%; 
     background-size: initial; 
