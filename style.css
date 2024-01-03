@@ -505,8 +505,10 @@ strong {
 
 strong { 
     font-weight: bold !important;
-    color: black
 } 
+header h2 strong {
+    color:#333
+}
 
 em { 
     padding: 0; 
