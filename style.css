@@ -504,7 +504,7 @@ strong {
 } 
 
 strong { 
-    font-weight: bold;
+    font-weight: bold !important;
 } 
 
 em { 
