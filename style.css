@@ -223,6 +223,9 @@ a {
 a { 
     color: #d5000d;
 } 
+header h2 a { 
+    color: #a2a2a2;
+} 
 
 a { 
     text-decoration: none;
