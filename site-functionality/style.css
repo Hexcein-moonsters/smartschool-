@@ -735,8 +735,8 @@ code, pre {
     color: #222;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, a, li, strong, em, u, i, b, small {
-    font-size: 1.2em;
+h1, h2, h3, h4, h5, h6, p, span, a, li, strong, em, u, i, b, small, header {
+    font-size: 1.2em !important;
     }
   
 
