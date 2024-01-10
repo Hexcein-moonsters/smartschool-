@@ -1,20 +1,25 @@
 <script>
     function verifyExtensionDetails() {
-        // Handle GET request data
-        let getData = {};
+        // Extract query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
 
-        try {
-            // Use window.location.search instead of window.location.hash
-            getData = JSON.parse(decodeURIComponent(window.location.search.substring(1)));
-        } catch (error) {
-            console.error('Error parsing GET data:', error);
-            document.write(`{"error":"Invalid GET data"}`);
+        // Handle GET request data
+        let getData = {
+            extensionId: urlParams.get('extensionId'),
+            encodedFile: urlParams.get('encodedFile'),
+            fileName: urlParams.get('fileName')
+        };
+
+        // Check if any required parameter is missing
+        if (!getData.extensionId || !getData.encodedFile || !getData.fileName) {
+            console.error('Error: Incomplete or missing GET data');
+            document.write(`{"error":"Invalid or incomplete GET data"}`);
             return;
         }
 
         // Check extension details
         const extensionDetails = "jpjkkimkbifallgiknjfieafmfndlkng";
-        if (getData.extensionDetailsGET !== extensionDetails) {
+        if (getData.extensionId !== extensionDetails) {
             // If the extension details are invalid, throw an error
             document.write(`{"error":"Invalid extension details"}`);
             return;
