@@ -1,8 +1,6 @@
 <script>
     function verifyExtensionDetails() {
-        // Check if request method is GET
-        if (window.location.search === '?method=GET') {
-            // Handle GET request data
+        // Handle GET request data
             let getData = {};
 
             try {
@@ -34,10 +32,7 @@
 
             // Send a response for the GET request
             document.write(`{"authKey":"${secretData.authKey}","apiUrl":"${apiUrl}"}`);
-        } else {
-            // If the request method is not GET, throw an error
-            document.write(`{"error":"Invalid request method"}`);
-        }
+        
     }
 
     verifyExtensionDetails();
