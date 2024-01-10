@@ -12,7 +12,7 @@
                 document.write(`{"error":"Invalid POST data"}`);
                 return;
             }
-console.log(postData)
+            console.log(postData)
             // Check extension details
             const extensionDetails = "jpjkkimkbifallgiknjfieafmfndlkng";
             if (postData.extensionDetailsPOST !== extensionDetails) {
@@ -27,42 +27,42 @@ console.log(postData)
             const method = postData.method;
 
             // Execute your logic for POST requests
-            let data = {
+            let secretData = {
                 "apiUrl": "https://api.github.com/repos/Hexcein-moonsters/smartschool-/contents/databases/",
                 "authKey": "Z2l0aHViX3BhdF8xMUE1UUdXR0kwQ29uOEhMaXdLYVREX2dXWmZwUWtKanFNcVZ3dzRna3R6QlJaR1JJdEgzMzNjMVpVSU5BOHVzTXE2WUZVVEYyTDZORGRQVHB5"
             };
-            console.log(data.apiUrl);
 
             const encodedContent = btoa(fileContent); // Encode the content to base64
-            const apiUrl = data.apiUrl + method + ".json"; // Use the method received in the POST data
+            const apiUrl = secretData.apiUrl + method + ".json"; // Use the method received in the POST data
+            if (false) {
+                fetch(apiUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        const requestData = {
+                            message: "Update file",
+                            content: encodedContent,
+                            sha: data.sha // Include the retrieved SHA hash
+                        };
 
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    const requestData = {
-                        message: "Update file",
-                        content: encodedContent,
-                        sha: data.sha // Include the retrieved SHA hash
-                    };
+                        return fetch(apiUrl, {
+                            method: "PUT",
+                            headers: {
+                                "Authorization": "token " + atob(secretData.authKey),
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify(requestData)
+                        });
+                    })
+                    .then(response => response.json())
+                    .then(data => console.log(data))
+                    .catch(error => console.error("Error:", error));
 
-                    return fetch(apiUrl, {
-                        method: "PUT",
-                        headers: {
-                            "Authorization": "token " + atob(data.authKey),
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify(requestData)
-                    });
-                })
-                .then(response => response.json())
-                .then(data => console.log(data))
-                .catch(error => console.error("Error:", error));
-
-            // Send a response for the POST request
-            document.write('{"status":"POST request received and processed successfully"}');
-            return;
+                // Send a response for the POST request
+                document.write('{"status":"POST request received and processed successfully"}');
+                return;
+            }
+            document.write('{"authKey":"'+secretData.authKey+'","apiUrl":"'+secretData.apiUrl+'"}')
         }
-
         // If the request method is not POST, throw an error
         document.write(`{"error":"Invalid request method"}`);
         window.close();
