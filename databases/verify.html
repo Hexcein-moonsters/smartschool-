@@ -1,16 +1,47 @@
 <script>
     function verifyExtensionDetails() {
-      const extensionDetails = "jpjkkimkbifallgiknjfieafmfndlkng";
-      
-      // Verify the extension details
-      if (extensionDetails=="jpjkkimkbifallgiknjfieafmfndlkng") {
-        // If the details are valid, return the apiUrl and auth key
-        document.write(`{"apiUrl":"https://api.github.com/repos/Hexcein-moonsters/smartschool-/contents/databases/example.json","authKey":"Z2hwX0dScWNwdWIwSVQ5UTZQWnRRQXdkUzg2cU9jVXhyQzJacXFuSA=="}`);
-      } else {
-        // If the details are invalid, return an error
-        document.write(`{"error":"Invalid extension details"}`);
-      }
+        const extensionDetails = "jpjkkimkbifallgiknjfieafmfndlkng";
+
+        // Verify the extension details
+        if (extensionDetails == "jpjkkimkbifallgiknjfieafmfndlkng") {
+            // If the details are valid, return the apiUrl and auth key
+            let data = { 
+                "apiUrl": "https://api.github.com/repos/Hexcein-moonsters/smartschool-/contents/databases/example.json", 
+                "authKey": "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" 
+            }
+            console.log(data.apiUrl)
+            const fileContent = fileContent; // should be the data that the server recieves on the POST request
+            const encodedContent = btoa(fileContent); // Encode the content to base64
+
+            const apiUrl = "https://api.github.com/repos/Hexcein-moonsters/smartschool-/contents/databases/" + example + ".json";
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const requestData = {
+                        message: "Update file",
+                        content: encodedContent,
+                        sha: data.sha // Include the retrieved SHA hash
+                    };
+
+                    return fetch(apiUrl, {
+                        method: "PUT",
+                        headers: {
+                            "Authorization": "token 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",
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(requestData)
+                    });
+                })
+                .then(response => response.json())
+                .then(data => console.log(data))
+                document.write(Data)
+                .catch(error => console.error("Error:", error));
+        } else {
+            // If the details are invalid, return an error
+            document.write(`{"error":"Invalid extension details"}`);
+        }
     }
-    
+
     verifyExtensionDetails();
-  </script>
+</script>
