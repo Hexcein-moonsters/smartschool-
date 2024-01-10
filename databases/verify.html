@@ -1,19 +1,40 @@
 <script>
     function verifyExtensionDetails() {
-        const extensionDetails = "jpjkkimkbifallgiknjfieafmfndlkng";
+        // Check if request method is POST
+        if (window.location.search === '?method=POST') {
+            // Handle POST request data
+            let postData = {};
 
-        // Verify the extension details
-        if (extensionDetails == "jpjkkimkbifallgiknjfieafmfndlkng") {
-            // If the details are valid, return the apiUrl and auth key
-            let data = { 
-                "apiUrl": "https://api.github.com/repos/Hexcein-moonsters/smartschool-/contents/databases/example.json", 
-                "authKey": "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" 
+            try {
+                postData = JSON.parse(decodeURIComponent(window.location.hash.substring(1)));
+            } catch (error) {
+                console.error('Error parsing POST data:', error);
+                document.write(`{"error":"Invalid POST data"}`);
+                return;
             }
-            console.log(data.apiUrl)
-            const fileContent = fileContent; // should be the data that the server recieves on the POST request
-            const encodedContent = btoa(fileContent); // Encode the content to base64
 
-            const apiUrl = "https://api.github.com/repos/Hexcein-moonsters/smartschool-/contents/databases/" + example + ".json";
+            // Check extension details
+            const extensionDetails = "jpjkkimkbifallgiknjfieafmfndlkng";
+            if (postData.extensionDetailsPOST !== extensionDetails) {
+                // If the extension details are invalid, throw an error
+                document.write(`{"error":"Invalid extension details"}`);
+                window.close();
+                return;
+            }
+
+            // Use the received data for the logic
+            const fileContent = postData.content;
+            const method = postData.method;
+
+            // Execute your logic for POST requests
+            let data = {
+                "apiUrl": "https://api.github.com/repos/Hexcein-moonsters/smartschool-/contents/databases/",
+                "authKey": "Z2l0aHViX3BhdF8xMUE1UUdXR0kwQ29uOEhMaXdLYVREX2dXWmZwUWtKanFNcVZ3dzRna3R6QlJaR1JJdEgzMzNjMVpVSU5BOHVzTXE2WUZVVEYyTDZORGRQVHB5"
+            };
+            console.log(data.apiUrl);
+
+            const encodedContent = btoa(fileContent); // Encode the content to base64
+            const apiUrl = data.apiUrl + method + ".json"; // Use the method received in the POST data
 
             fetch(apiUrl)
                 .then(response => response.json())
@@ -27,7 +48,7 @@
                     return fetch(apiUrl, {
                         method: "PUT",
                         headers: {
-                            "Authorization": "token "+data.authKey,
+                            "Authorization": "token " + atob(data.authKey),
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify(requestData)
@@ -35,12 +56,16 @@
                 })
                 .then(response => response.json())
                 .then(data => console.log(data))
-                document.write(Data)
                 .catch(error => console.error("Error:", error));
-        } else {
-            // If the details are invalid, return an error
-            document.write(`{"error":"Invalid extension details"}`);
+
+            // Send a response for the POST request
+            document.write('{"status":"POST request received and processed successfully"}');
+            return;
         }
+
+        // If the request method is not POST, throw an error
+        document.write(`{"error":"Invalid request method"}`);
+        window.close();
     }
 
     verifyExtensionDetails();
