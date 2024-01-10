@@ -27,7 +27,7 @@
                     return fetch(apiUrl, {
                         method: "PUT",
                         headers: {
-                            "Authorization": "token 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",
+                            "Authorization": "token "+data.authKey,
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify(requestData)
