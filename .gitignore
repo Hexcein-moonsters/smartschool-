@@ -1,3 +1,4 @@
 databases/
 .gitignore
 .databases/
+.database/
