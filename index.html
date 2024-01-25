@@ -174,20 +174,27 @@
     </div>
 
     <script>
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-         anchor.addEventListener('click', function (e) {
-           e.preventDefault();
-     
-           document.querySelector(this.getAttribute('href')).scrollIntoView({
-             behavior: 'smooth',
-             block: 'start',
-           });
-     
-           window.scrollBy(0, -20);
-         });
+      document.addEventListener("DOMContentLoaded", function() {
+       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+      
+            var targetId = this.getAttribute('href');
+            var target = document.querySelector(targetId);
+            
+            if (target) {
+              var offsetTop = target.offsetTop;
+              
+              window.scrollTo({
+                top: offsetTop - 20,
+                behavior: 'smooth'
+              });
+            }
+          });
+       });
       });
-     </script>
-     
-
+      </script>
+      
+    
 </body>
 </html>
