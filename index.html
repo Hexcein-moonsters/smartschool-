@@ -183,12 +183,9 @@
             var target = document.querySelector(targetId);
             
             if (target) {
-              var offsetTop = target.offsetTop;
-              
-              window.scrollTo({
-                top: offsetTop - 0,
-                behavior: 'smooth'
-              });
+              target.scrollIntoView({
+        behavior: 'smooth'
+    });
             }
           });
        });
