@@ -26,8 +26,9 @@ If you'd like to contribute to the development of Smartschool+, please fork the 
 
 ## Licensing
 
-Information about the license under which Smartschool+ is released will go here.
+GPL.
+"Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed."
 
 ## Contact
 
-If you have any questions or run into any issues, feel free to contact us.
+If you have any questions or run into any issues, feel free to contact me or create a Github issue.
