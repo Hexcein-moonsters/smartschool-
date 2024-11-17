@@ -1,3 +1,12 @@
+body {
+    font: inherit;
+    font-size: 100%;
+    background: transparent url(images/highlight-bg.jpg) 50% 0 no-repeat;
+    background-image: url("images/highlight-bg.jpg");
+    line-height: 1.5;
+    font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+    color: #6d6d6d;
+}
 div { 
     padding: 0; 
     margin: 0; 
